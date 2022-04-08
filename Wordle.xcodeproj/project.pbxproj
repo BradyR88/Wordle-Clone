@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7397096628008A790090A35A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7397096528008A790090A35A /* ViewModel.swift */; };
 		73C5009627FF3D7B00FA90A6 /* WordleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C5009527FF3D7B00FA90A6 /* WordleApp.swift */; };
-		73C5009827FF3D7B00FA90A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C5009727FF3D7B00FA90A6 /* ContentView.swift */; };
+		73C5009827FF3D7B00FA90A6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C5009727FF3D7B00FA90A6 /* MainView.swift */; };
 		73C5009A27FF3D7C00FA90A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73C5009927FF3D7C00FA90A6 /* Assets.xcassets */; };
 		73C5009D27FF3D7C00FA90A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73C5009C27FF3D7C00FA90A6 /* Preview Assets.xcassets */; };
+		73C500A527FF3E0200FA90A6 /* BordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C500A427FF3E0200FA90A6 /* BordView.swift */; };
+		73C500A727FF428700FA90A6 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C500A627FF428700FA90A6 /* KeyboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7397096528008A790090A35A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		73C5009227FF3D7B00FA90A6 /* Wordle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C5009527FF3D7B00FA90A6 /* WordleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleApp.swift; sourceTree = "<group>"; };
-		73C5009727FF3D7B00FA90A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		73C5009727FF3D7B00FA90A6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		73C5009927FF3D7C00FA90A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73C5009C27FF3D7C00FA90A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		73C500A427FF3E0200FA90A6 /* BordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BordView.swift; sourceTree = "<group>"; };
+		73C500A627FF428700FA90A6 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				73C5009527FF3D7B00FA90A6 /* WordleApp.swift */,
-				73C5009727FF3D7B00FA90A6 /* ContentView.swift */,
+				73C500A327FF3DDF00FA90A6 /* Views */,
+				7397096528008A790090A35A /* ViewModel.swift */,
 				73C5009927FF3D7C00FA90A6 /* Assets.xcassets */,
 				73C5009B27FF3D7C00FA90A6 /* Preview Content */,
 			);
@@ -65,6 +72,16 @@
 				73C5009C27FF3D7C00FA90A6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		73C500A327FF3DDF00FA90A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				73C5009727FF3D7B00FA90A6 /* MainView.swift */,
+				73C500A427FF3E0200FA90A6 /* BordView.swift */,
+				73C500A627FF428700FA90A6 /* KeyboardView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73C5009827FF3D7B00FA90A6 /* ContentView.swift in Sources */,
+				7397096628008A790090A35A /* ViewModel.swift in Sources */,
+				73C5009827FF3D7B00FA90A6 /* MainView.swift in Sources */,
+				73C500A727FF428700FA90A6 /* KeyboardView.swift in Sources */,
 				73C5009627FF3D7B00FA90A6 /* WordleApp.swift in Sources */,
+				73C500A527FF3E0200FA90A6 /* BordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
