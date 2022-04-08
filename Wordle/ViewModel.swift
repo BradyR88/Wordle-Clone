@@ -12,6 +12,7 @@ class ViewModel: ObservableObject {
     
     @Published var tiles = [Tile]()
     var cursorPosition = Coordinates(row: 1, column: 1)
+    let rightAnswer = "ClIMB"
     
     init() {
         addTiles()
@@ -72,12 +73,33 @@ class ViewModel: ObservableObject {
         
         if let index = self.tiles.firstIndex(where: { $0.coordinates == cursorPosition }) {
             
-            tiles[index].leter = ""
-            
-            if cursorPosition.column > 1 {
+            if tiles[index].leter == "" && cursorPosition.column > 1 {
                 cursorPosition.column -= 1
+                if let index = self.tiles.firstIndex(where: { $0.coordinates == cursorPosition }) {
+                    tiles[index].leter = ""
+                }
+                
             }
+            else if cursorPosition.column == 5 || cursorPosition.column == 1 {
+                tiles[index].leter = ""
+            }
+            else {
+                print("Something has gone terribly wrong. =( Check your backspace button! your cursor position might not be where you expect it to be!")
+            }
+        }
+    }
+    
+    func enterButton() {
+        
+        if let index = self.tiles.firstIndex(where: { $0.coordinates == cursorPosition }) {
             
+            if cursorPosition.column == 5 && tiles[index].leter != "" /* && isARealWorld == true */ {
+                cursorPosition.column = 1
+                
+                if cursorPosition.row != 6 {
+                    cursorPosition.row += 1
+                }
+            }
         }
     }
 }

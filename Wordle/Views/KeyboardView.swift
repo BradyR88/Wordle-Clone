@@ -61,6 +61,7 @@ struct KeyRow: View {
             if lastrow == true {
                 Button {
                     // enter
+                    viewModel.enterButton()
                 } label: {
                     ZStack {
                         Rectangle()
@@ -86,6 +87,7 @@ struct KeyRow: View {
             if lastrow == true {
                 Button {
                     // delete
+                    viewModel.baspaceButton()
                 } label: {
                     ZStack {
                         Rectangle()
