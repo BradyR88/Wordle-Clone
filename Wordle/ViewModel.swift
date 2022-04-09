@@ -12,7 +12,7 @@ class ViewModel: ObservableObject {
     
     @Published var tiles = [Tile]()
     var cursorPosition = Coordinates(row: 1, column: 1)
-    let rightAnswer = "ClIMB"
+    let rightAnswer = "CLIMB"
     
     init() {
         addTiles()
@@ -129,8 +129,8 @@ class ViewModel: ObservableObject {
             if hasAVerticalMach[column - 1] == false {
                 if let index = self.tiles.firstIndex(where: { $0.coordinates == Coordinates(row: cursorPosition.row, column: column) }) {
                     for letterInAnswer in 1...5 {
-                        if hasAVerticalMach[letterInAnswer - 1] == false || hasAVerticalMach[letterInAnswer - 1] == false {
-                            if tiles[index].leter.uppercased() == rightAnswer[letterInAnswer - 1] {
+                        if hasAVerticalMach[letterInAnswer - 1] == false && hasAMach[letterInAnswer - 1] == false {
+                            if tiles[index].leter.uppercased() == rightAnswer[letterInAnswer - 1].uppercased() {
                                 tiles[index].status = .rightWrongSpot
                                 hasAMach[letterInAnswer - 1] = true
                             }
