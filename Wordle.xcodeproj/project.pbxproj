@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7397096628008A790090A35A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7397096528008A790090A35A /* ViewModel.swift */; };
+		7397096828011F800090A35A /* AcceptableWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7397096728011F800090A35A /* AcceptableWords.swift */; };
 		73C5009627FF3D7B00FA90A6 /* WordleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C5009527FF3D7B00FA90A6 /* WordleApp.swift */; };
 		73C5009827FF3D7B00FA90A6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C5009727FF3D7B00FA90A6 /* MainView.swift */; };
 		73C5009A27FF3D7C00FA90A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73C5009927FF3D7C00FA90A6 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		7397096528008A790090A35A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		7397096728011F800090A35A /* AcceptableWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptableWords.swift; sourceTree = "<group>"; };
 		73C5009227FF3D7B00FA90A6 /* Wordle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C5009527FF3D7B00FA90A6 /* WordleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleApp.swift; sourceTree = "<group>"; };
 		73C5009727FF3D7B00FA90A6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				73C5009527FF3D7B00FA90A6 /* WordleApp.swift */,
 				73C500A327FF3DDF00FA90A6 /* Views */,
 				7397096528008A790090A35A /* ViewModel.swift */,
+				7397096728011F800090A35A /* AcceptableWords.swift */,
 				73C5009927FF3D7C00FA90A6 /* Assets.xcassets */,
 				73C5009B27FF3D7C00FA90A6 /* Preview Content */,
 			);
@@ -157,6 +160,7 @@
 				7397096628008A790090A35A /* ViewModel.swift in Sources */,
 				73C5009827FF3D7B00FA90A6 /* MainView.swift in Sources */,
 				73C500A727FF428700FA90A6 /* KeyboardView.swift in Sources */,
+				7397096828011F800090A35A /* AcceptableWords.swift in Sources */,
 				73C5009627FF3D7B00FA90A6 /* WordleApp.swift in Sources */,
 				73C500A527FF3E0200FA90A6 /* BordView.swift in Sources */,
 			);

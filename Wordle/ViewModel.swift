@@ -12,10 +12,12 @@ class ViewModel: ObservableObject {
     
     @Published var tiles = [Tile]()
     var cursorPosition = Coordinates(row: 1, column: 1)
-    let rightAnswer = "CLIMB"
+    private let words = AcceptableWords()
+    private var rightAnswer = ""
     
     init() {
         addTiles()
+        pickRightAnswer()
     }
     
     func addTiles() {
@@ -27,6 +29,11 @@ class ViewModel: ObservableObject {
                                                                              column: column))])
             }
         }
+    }
+    
+    func pickRightAnswer() {
+        let numOfAnswers = words.allAnswers.count
+        self.rightAnswer = words.allAnswers[Int.random(in: 0...numOfAnswers-1)]
     }
     
     func tileFromCoordinates(coordinates: Coordinates) -> Tile? {
@@ -94,8 +101,8 @@ class ViewModel: ObservableObject {
     func enterButton() {
         
         if let index = self.tiles.firstIndex(where: { $0.coordinates == cursorPosition }) {
-            
-            if cursorPosition.column == 5 && tiles[index].leter != "" /* && isARealWorld == true */ {
+            let test = isARealWorld()
+            if cursorPosition.column == 5 && tiles[index].leter != "" && test == true {
                 checkLine() // this Hass to be done before we move to the next row because it's getting its row information from the current cursor position
                 cursorPosition.column = 1
                 
@@ -104,6 +111,16 @@ class ViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    func isARealWorld() -> Bool {
+        var userWord = ""
+        for column in 1...5 {
+            if let index = self.tiles.firstIndex(where: { $0.coordinates == Coordinates(row: cursorPosition.row, column: column) }) {
+                userWord += tiles[index].leter.lowercased()
+            }
+        }
+        return words.input.contains(userWord) || words.allAnswers.contains(userWord)
     }
     
     // this has to be done before we move to the next row because it's getting its row information from the current cursor position
