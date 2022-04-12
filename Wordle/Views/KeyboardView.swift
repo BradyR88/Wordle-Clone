@@ -11,7 +11,7 @@ struct KeyboardView: View {
     
     private let topRow = ["Q","W","E","R","T","Y","U","I","O","P"]
     private let midRow = ["A","S","D","F","G","H","J","K","L"]
-    private let bottomRow = ["Z","X","C","V","B","N","N","M"]
+    private let bottomRow = ["Z","X","C","V","B","N","M"]
     
     var body: some View {
         ZStack {
@@ -34,12 +34,13 @@ struct KeyboardView_Previews: PreviewProvider {
 
 struct Key: View {
     
+    @EnvironmentObject var viewModel: ViewModel
     var keyName: String
     
     var body: some View {
         ZStack {
             Rectangle()
-                .foregroundColor(.gray)
+                .foregroundColor(viewModel.leterColor(key: keyName))
                 .cornerRadius(8)
                 .frame(width: 30, height: 44, alignment: .center)
             Text(keyName)
@@ -67,7 +68,7 @@ struct KeyRow: View {
                         Rectangle()
                             .foregroundColor(.gray)
                             .cornerRadius(8)
-                            .frame(width: 30, height: 44, alignment: .center)
+                            .frame(width: 47, height: 44, alignment: .center)
                         Image(systemName: "arrow.up.to.line")
                             .foregroundColor(.white)
                     }
@@ -93,7 +94,7 @@ struct KeyRow: View {
                         Rectangle()
                             .foregroundColor(.gray)
                             .cornerRadius(8)
-                            .frame(width: 30, height: 44, alignment: .center)
+                            .frame(width: 47, height: 44, alignment: .center)
                         Image(systemName: "delete.left")
                             .foregroundColor(.white)
                     }
